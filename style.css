@@ -1,0 +1,372 @@
+/*General styling*/
+
+* {
+    margin: 0; 
+    padding: 0; 
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+p, h1 {
+    color: white;
+    font-family: "Oswald", sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+/*Nav bar stuff and banner imaging*/
+
+#mobile {
+    display: none; 
+}
+
+#desktop {
+    position: absolute;
+    height: 30em;
+    top: 5em;
+    left: 3em; 
+    width: 10em;
+}
+
+.desk-cont {
+    height: 30em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/*Learning from project, to change color/ size of imported icons use text styling properties like font-size or color*/
+
+.icon i {
+    font-size: 100px;
+}
+
+.icon i:hover {
+    color: red;
+}
+
+.banner {
+    background-image: url(imgs/banner-img.jpg);
+    background-size: cover;
+    z-index: 100;
+    height: 40em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.banner-cont {
+    background-color: rgba(189, 5, 5, 0.69);
+    margin-right: 7em;
+    padding: 3em;
+    border: solid 1px rgba(189, 5, 5, 0.69);
+}
+
+.banner-cont:hover {
+    background-color: rgba(189, 5, 5, 0.8);
+}
+
+.banner-cont h1 {
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 700;
+    font-size: 5em;
+    font-style: normal;
+}
+
+.banner-cont p {
+    text-align: center;
+    font-weight: 500;
+}
+
+/*Media queires for nav and banner section*/
+
+@media only screen and (max-width: 900px) {
+    .banner-cont {
+        margin-right: 2em; 
+    }
+}
+
+@media only screen and (max-width: 705px) {
+    #desktop {
+        display: none;
+    }
+
+    #mobile {
+        width: 100%;
+        height: 8em;
+        background-color: rgba(189, 5, 5, 0.85);
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mob-cont {
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mob-cont li {
+        text-align: center;
+        padding: 0.5em 0;
+        font-size: 1.2em;
+        font-weight: 600;
+        font-family: "Bebas Neue", sans-serif;
+    }
+
+    .banner {
+        align-items: center;
+    }
+
+    .banner-cont {
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .banner-cont {
+        padding: 1em; 
+    }
+
+    .banner-cont h1 {
+        font-size: 4em;
+    }
+
+    .banner-cont p {
+        display: none;
+    }
+
+    .banner {
+        height: 35em;
+    }
+}
+
+/*Statement section */
+
+.statement {
+    background-image: url(imgs/Quote-img.jpg);
+    background-size: cover;
+    height: 12.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.statement h1 {
+    background-color: rgba(189, 5, 5, 0.8);
+    padding: 1.5em;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.statement h1:hover {
+    background-color: rgba(189, 5, 5, 0.6);
+}
+
+/*Event section*/
+
+.events {
+    height: 28em; 
+    background-image: url(imgs/desk-event-background.jpg);
+    background-size: cover;
+}
+
+.events h2 {
+    background-color: rgba(189, 5, 5, 1);
+    text-align: center;
+    font-size: 3em;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.events h2:hover {
+    color: white;
+}
+
+.event-cont {
+    display: flex;
+    height: 90%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.event {
+    height: 13em;
+    margin: 1em;
+}
+
+.event img {
+    height: 100%;
+}
+
+.event figcaption {
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    background-color: rgba(189, 5, 5, 0.8);
+}
+
+@media only screen and (max-width: 1033px) {
+    .events {
+        background-image: url(imgs/mob-event-background.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 125em;
+    }
+
+    .event-cont {
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: nowrap;
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .event {
+        height: auto;
+        width: 90%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .event img {
+        width: 90%;
+        height: auto;
+        align-self: center;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .events {
+        height: 94em;  
+    }
+}
+
+/*This will be the drinks section with a small article that changes from wrapping to stacked*/
+
+#drinks {
+    background-image: url(imgs/drink-background.jpg);
+    background-repeat: none;
+    background-size: cover;
+    height: 30em;
+    position: absolute;
+}
+
+#drinks img {
+    max-width: 50%;
+    height: 80%;
+    float: right;
+    margin: 3em 1em 1em 1em;
+}
+
+.drink-art { 
+    max-width: 45%;
+    height: 80%;
+    position: relative; 
+    left: 1em;
+    background-color: rgba(189, 5, 5, 0.49);
+}
+
+#drinks h3 {
+    color: black;
+    font-size: 3em;
+    font-family: "Bebas Neue", sans-serif;
+    margin: 1em 0.5em 0 0.5em;
+    text-align: start;
+}
+
+#drinks p {
+    color: black;
+    margin: 0.5em;
+    font-size: 1.25em;
+}
+
+@media only screen and (max-width: 900px) {
+    #drinks img {
+        height: auto;
+        margin: 1em 0;
+    }
+
+    .drink-art {
+        height: auto;
+        max-width: 50%;
+        padding-bottom: 1em;
+        position: static;
+    }
+
+    #drinks {
+        height: auto;
+        padding-bottom: 2em;
+        position: static;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/*Footer section*/
+
+footer {
+    position: relative; 
+    top: 30em;
+    height: 10em;
+    background-color: rgba(18, 16, 16, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer h1 {
+    padding-left: 3em;
+}
+
+.child {
+    padding-right: 5em;
+}
+
+.child li {
+    padding: 0.5em;
+}
+
+.child a {
+    color: white;
+}
+
+@media only screen and (max-width: 900px) {
+    footer {
+    position: static;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    footer h1 {
+        display: none;
+    }
+
+    footer {
+        justify-content: space-around;
+    }
+
+    .child {
+        padding: 0;
+    }
+}
+
+/*Notes about project, made pretty responsive with things changing around for smaller screens, happy I learnt how to incorporate icons as they look cool on this. Happy with this project as only took a day rather than weeks like previous. Good understanding of flex box and how media queries work now. */
